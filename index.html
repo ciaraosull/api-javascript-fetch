@@ -12,10 +12,10 @@
 
     <script>
         fetch("https://ci-swapi.herokuapp.com/api/")
-            .then(response => response.json()) // or .text()
+            .then(response => response.text()) // or .json()
             .then(data => {
-                document.getElementById("content").innerText = data.people;  // or leave off people or try another
-            });
+                document.getElementById("content").innerText = data;
+            })
             .catch((e) => {
                 console.log("Error: ", e);
             })
